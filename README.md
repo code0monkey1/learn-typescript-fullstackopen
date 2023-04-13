@@ -100,3 +100,14 @@
           >Conversion of type 'string' to type 'number' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
   
   1. Narrowing :
+      
+      1. **typeOf type Guards** : 
+          1. "string"
+          1. "number"
+          1. "bigint"
+          1. "boolean"
+          1. "symbol"
+          1. "undefined"
+          1. "object"
+          1. "function"
+              
