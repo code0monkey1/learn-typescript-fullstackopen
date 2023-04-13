@@ -71,5 +71,12 @@
 
 ### Typescript Language Quirks 
    
-   1. Type Assertions    
-      - Som
+   1. Type Assertions :    
+      - In some situations , typescript cannot know what type an element will convert to , in that case you can explicitly assert it to be of a specific type .
+      - For example, if you’re using document.getElementById, TypeScript only knows that this will return some kind of HTMLElement, but you might know that your page will always have an HTMLCanvasElement with a given ID.
+  
+        ```javascript
+          
+          const myCanvas = document.getElementById("main_canvas") as HTMLCanvasElement;
+
+        ```
