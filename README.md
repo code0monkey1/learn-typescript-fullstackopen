@@ -111,8 +111,8 @@
           1. "object"
           1. "function"    
    
-         >Your need to convert a loosely typed variable , to a more specific one to perform operations that are `specific to the said type`  
-         
+         >Your need to confirm using `typeof` that a value is of a given type , to perform operations that are `specific to the given type`  
+
          ```javascript
           function padLeft(padding: number | string, input: string) {
             if (typeof padding === "number") {
@@ -129,3 +129,4 @@
             (parameter) padding: string
           }   
          ```
+      1. 
