@@ -25,8 +25,9 @@
       - >**the intended contract** : birthdayGreeter function will accept two arguments: one of type string and one of type number. The function will return a string
 1. Structural typing
      
-     Two elements are considered identical to one another if, for each feature within the type of the first element, a corresponding and identical feature exists within the type of the second element.
-       ```javascript
+     Two elements are considered identical to one another if, for each feature within the type of the first element, a corresponding and identical feature exists within the type of the second element. 
+       
+      ```javascript
      
        interface Person {
           name: string;
@@ -42,4 +43,4 @@
         
         const jane = { name: 'Jane', age: 25 };
         greet(jane); // This also works because jane has the same structure as Person
-        ```
+      ```
