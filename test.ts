@@ -36,8 +36,12 @@ interface Cat {
   color: string;
 }
 
+class Farm {
+   constructor(name: string, age: number){ }
+}
+
 function isDog(animal: Dog | Cat): animal is Dog {
-  return animal instanceof Number;
+  return animal instanceof Farm;
 }
 
 const myDog: Dog = { name: 'Fido', breed: 'Labrador' };
