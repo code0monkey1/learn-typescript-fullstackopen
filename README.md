@@ -46,4 +46,12 @@
       ```
 1. Type inference
      
-      +  
+      ```javascript
+
+           const add = (a: number, b: number) => {
+            /* The return value is used to determine
+               the return type of the function */
+            return a + b;
+          }
+        
+      ``` 
