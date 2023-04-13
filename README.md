@@ -131,7 +131,7 @@
             (parameter) padding: string
           }   
          ```
-      2. **Double-Boolean negation** : Put Double `!!` exclamation mark before any variable , to coerce it into a boolean value .
+      1. **Double-Boolean negation** : Put Double `!!` exclamation mark before any variable , to coerce it into a boolean value .
    
             >
             > const myVar = 'hello';  
@@ -148,3 +148,4 @@
            - 0n (the bigint version of zero)
            - null
            - undefined
+      1. **instanceof narrowing**
