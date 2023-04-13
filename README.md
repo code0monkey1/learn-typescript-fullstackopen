@@ -55,3 +55,12 @@
                 return a + b;
               }
           ``` 
+1. Type erasure 
+      - i.e : No type information remains at runtime - nothing says that some variable x was declared as being of type SomeType
+         >Input:
+         >
+         >let x: SomeType;
+         > ---
+         >Output:
+         >
+         >let x;
