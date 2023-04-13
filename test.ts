@@ -25,3 +25,31 @@ function addNumbers( numbers: MyType | number[] ) {
 
     }
 }
+
+interface Dog {
+  name: string;
+  breed: string;
+}
+
+interface Cat {
+  name: string;
+  color: string;
+}
+
+function isDog(animal: Dog | Cat): animal is Dog {
+  return (animal as Dog).breed !== undefined;
+}
+
+const myDog: Dog = { name: 'Fido', breed: 'Labrador' };
+const myCat: Cat = { name: 'Whiskers', color: 'gray' };
+
+function printAnimal(animal: Dog | Cat) {
+  if (isDog(animal)) {
+    console.log(`${animal.name} is a ${animal.breed} dog`);
+  } else {
+    console.log(`${animal.name} is a ${animal.color} cat`);
+  }
+}
+
+printAnimal(myDog); // "Fido is a Labrador dog"
+printAnimal(myCat); //
