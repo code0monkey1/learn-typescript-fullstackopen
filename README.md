@@ -73,14 +73,14 @@
    
    1. Type Assertions :    
       - In some situations , typescript cannot know what type an element will convert to , in that case you can explicitly assert it to be of a specific type .
-      - For example, if you’re using document.getElementById, TypeScript only knows that this will return some kind of HTMLElement, but you might know that your page will always have an HTMLCanvasElement with a given ID.
+      - For example, if you’re using document.getElementById, TypeScript only knows that this will return some kind of HTMLElement, but _you might know that your page will always have an HTMLCanvasElement_ with a given ID.
   
         ```javascript
           
         const myCanvas = document.getElementById("main_canvas") as HTMLCanvasElement;
           
          // alternative syntax
-         const myCanvas = <HTMLCanvasElement>document.getElementById("main_canvas");
+        const myCanvas = <HTMLCanvasElement>document.getElementById("main_canvas");
 
         ```
       - TypeScript only allows type assertions which convert to a **more specific or less specific version of a type**. This rule _prevents “impossible” coercions_ like:
