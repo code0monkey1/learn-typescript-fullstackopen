@@ -109,5 +109,5 @@
           1. "symbol"
           1. "undefined"
           1. "object"
-          1. "function"
-              
+          1. "function"  
+         >Your need to convert a loosely typed variable , to a more specific one to perform operations that are `specific to the said type`
