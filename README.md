@@ -3,7 +3,7 @@
 
 ### TypeScript consists of three parts :
 
-1. The language -  
+1. The language :  
       - **syntax**
       - **keywords** 
       - **type annotations**
