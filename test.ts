@@ -37,7 +37,7 @@ interface Cat {
 }
 
 function isDog(animal: Dog | Cat): animal is Dog {
-  return animal instanceof String;
+  return animal instanceof Number;
 }
 
 const myDog: Dog = { name: 'Fido', breed: 'Labrador' };
