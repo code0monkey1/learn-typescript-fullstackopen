@@ -26,7 +26,7 @@
 1. Structural typing
      
      Two elements are considered identical to one another if, for each feature within the type of the first element, a corresponding and identical feature exists within the type of the second element. 
-       
+
       ```javascript
      
        interface Person {
@@ -44,3 +44,6 @@
         const jane = { name: 'Jane', age: 25 };
         greet(jane); // This also works because jane has the same structure as Person
       ```
+1. Type inference
+     
+      +  
