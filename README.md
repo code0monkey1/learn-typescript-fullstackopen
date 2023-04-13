@@ -81,7 +81,7 @@
 ---
 ### Typescript Language Quirks 
    
-   1. Type Assertions :    
+   1. ####  Type Assertions :    
       - In some situations , typescript cannot know what type an element will convert to , in that case you can explicitly assert it to be of a specific type .
       - For example, if you’re using document.getElementById, TypeScript only knows that this will return some kind of HTMLElement, but _you might know that your page will always have an HTMLCanvasElement_ with a given ID.
   
@@ -98,18 +98,20 @@
           `const x = "hello" as number;`
 
           >Conversion of type 'string' to type 'number' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
-  
-  1. Narrowing :
+
+
+
+  1. #### Narrowing :
       
       1. **typeOf type Guards** : 
           1. "string"
-          1. "number"
-          1. "bigint"
-          1. "boolean"
-          1. "symbol"
-          1. "undefined"
-          1. "object" ( Plain objects eg: {} | Classes | Interfaces | Enums | Arrays | Functions | Promises )
-          1. "function"    
+          2. "number"
+          3. "bigint"
+          4. "boolean"
+          5. "symbol"
+          6. "undefined"
+          7. "object" ( Plain objects eg: {} | Classes | Interfaces | Enums | Arrays | Functions | Promises )
+          8. "function"    
    
          >Your need to confirm using `typeof` that a value is of a given type , to perform operations that are `specific to the given type`  
 
