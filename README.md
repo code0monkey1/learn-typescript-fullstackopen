@@ -108,7 +108,7 @@
           1. "boolean"
           1. "symbol"
           1. "undefined"
-          1. "object" // can be used for array types
+          1. "object" ( Plain objects eg: {} | Classes | Interfaces | Enums | Arrays | Functions | Promises )
           1. "function"    
    
          >Your need to confirm using `typeof` that a value is of a given type , to perform operations that are `specific to the given type`  
