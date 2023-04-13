@@ -12,3 +12,16 @@ greet(john); // This works because john has the same structure as Person
 
 const jane = { name: 'Jane', age: 25 };
 greet(jane); // This also works because jane has the same structure as Person
+
+
+interface MyType{
+  a:number
+  b: number
+}
+
+function addNumbers( numbers: MyType | number[] ) {
+
+    if ( numbers instanceof Date ) {
+
+    }
+}
