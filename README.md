@@ -149,6 +149,7 @@
               - null
               - undefined
      
-      2. **instanceof narrowing**
+      1. **instanceof narrowing**
+   
            - This only works for identifying `classes created using new` , which includes predefine classes like `Error` , `Object` , `Array`, `String`, `Number`, etc. It also works for  `user defined classes` eg : ` class Cat{ } `.  
-           - `Does not work` for `interfaces` or `types`
+           - `Does not work` for user defined `interfaces` or `types`
