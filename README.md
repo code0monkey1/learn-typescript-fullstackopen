@@ -129,5 +129,5 @@
             (parameter) padding: string
           }   
          ```
-      1. Double-Boolean negation
+      1. Double-Boolean negation : Put Double `!!` exclamation mark before any variable , to coerce it into a boolean value value.
           >!!"world"; // type: true,    value: true
