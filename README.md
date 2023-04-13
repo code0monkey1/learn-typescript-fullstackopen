@@ -61,8 +61,9 @@
          >Input:
          >
          >let x: SomeType;
-         
+
          >
          >Output After **Transpiling to .js** :
+         >
          >
          >let x;
