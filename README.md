@@ -113,7 +113,7 @@
           7. "object" ( Plain objects eg: {} | Classes | Interfaces | Enums | Arrays | Functions | Promises )
           8. "function"    
    
-         >Your need to confirm using `typeof` that a value is of a given type , to perform operations that are `specific to the given type`  
+         >Your need to confirm using `typeof` that a value is of a given type , to perform operations that are `specific to` the `given type`  
 
          ```javascript
           function padLeft(padding: number | string, input: string) {
