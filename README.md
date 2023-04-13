@@ -155,7 +155,7 @@
            - `Does not work` for user defined `interfaces` or `types`
 
       2. **in operator narrowing**
-           - JavaScript has an operator for determining if an object has a property with a name: the in operator.   
+           - JavaScript has an operator for determining if an object has a property with a name: the `in` operator.   
            - TypeScript takes this into account as a way to narrow down potential types.  
            - ```javascript
               type Fish = { swim: () => void };
