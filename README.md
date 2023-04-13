@@ -71,12 +71,12 @@
 ---
 
 ### Typescript Gotcha 
-
-> Even though you many not see any Typescript compile time errors, you can still see that sometimes you get a runtime error . 
->
-> This generally is seen in typescript apps when they're trying to deal with data they request from api's whose data is not properly defined by the developer in the client  APP. 
->
-> So be **extremely careful while declaring types for the data retrieved from external API's**
+  
+  > Even though you many not see any Typescript compile time errors, you can still see that sometimes you get a runtime error . 
+  >
+  > This generally is seen in typescript apps when they're trying to deal with data they request from api's whose data is not properly defined by the developer in the client  APP. 
+  >
+  > So be **extremely careful while declaring types for the data retrieved from external API's**
 
 ---
 ### Typescript Language Quirks 
