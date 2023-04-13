@@ -129,4 +129,5 @@
             (parameter) padding: string
           }   
          ```
-      1. 
+      1. Double-Boolean negation
+          >!!"world"; // type: true,    value: true
