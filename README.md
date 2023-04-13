@@ -68,3 +68,8 @@
          >
          >
          >let x;
+
+### Typescript Language Quirks 
+   
+   1. Type Assertions    
+      - Som
