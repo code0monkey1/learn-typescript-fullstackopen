@@ -77,6 +77,11 @@
   
         ```javascript
           
-          const myCanvas = document.getElementById("main_canvas") as HTMLCanvasElement;
+        const myCanvas = document.getElementById("main_canvas") as HTMLCanvasElement;
+          
+         // alternative syntax
+         const myCanvas = <HTMLCanvasElement>document.getElementById("main_canvas");
 
         ```
+
+    1. TypeScript only allows type assertions which convert to a more specific or less specific version of a type. This rule prevents “impossible” coercions like:
