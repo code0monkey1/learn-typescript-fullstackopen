@@ -134,11 +134,11 @@
       2. **Double-Boolean negation** : Put Double `!!` exclamation mark before any variable , to coerce it into a boolean value .
    
             >
-            >const myVar = 'hello';
-            const isTruthy = !!myVar; // true
+            > const myVar = 'hello';  
+            > const isTruthy = !!myVar; // true
             >
-            >const myOtherVar = 0;
-            >const isTruthy2 = !!myOtherVar; // >false
+            > const myOtherVar = 0;  
+            > const isTruthy2 = !!myOtherVar; //false   
             >
   
         + The following values are coerced to false 
