@@ -153,3 +153,20 @@
    
            - This only works for identifying `classes created using new` , which includes predefine classes like `Error` , `Object` , `Array`, `String`, `Number`, etc. It also works for  `user defined classes` eg : ` class Cat{ } `.  
            - `Does not work` for user defined `interfaces` or `types`
+
+      1. **The in operator narrowing**
+           - JavaScript has an operator for determining if an object has a property with a name: the in operator.   
+           - TypeScript takes this into account as a way to narrow down potential types.  
+           - ```javascript
+              type Fish = { swim: () => void };
+              type Bird = { fly: () => void };
+               
+              function move(animal: Fish | Bird) {
+                if ("swim" in animal) {
+                  return animal.swim();
+                }
+               
+                return animal.fly();
+              }
+              
+             ``` 
