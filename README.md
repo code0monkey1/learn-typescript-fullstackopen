@@ -114,14 +114,16 @@
          ```javascript
           function padLeft(padding: number | string, input: string) {
             if (typeof padding === "number") {
-             // here we're only able to use repeat , as padding is `confirmed to be a number` , and not a string ,as the operation would be invalid with `padding` having a string value.
+             /* here we're only able to use repeat , 
+              as padding is `confirmed to be a number` , 
+              and not a string ,as the operation would be invalid 
+              with `padding` having a string value.*/
              return " ".repeat(padding) + input;
                                   
             (parameter) padding: number
               }
               return padding + input;
                        
-          (parameter) padding: string
-          }
-          
+            (parameter) padding: string
+          }   
          ```
