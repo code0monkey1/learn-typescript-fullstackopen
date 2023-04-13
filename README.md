@@ -150,4 +150,4 @@
               - undefined
      
       2. **instanceof narrowing**
-           - This only works for identifying `classes created using new` , which includes predefine classes like `Error`  
+           - This only works for identifying `classes created using new` , which includes predefine classes like `Error` , `Object` , `Array`  
