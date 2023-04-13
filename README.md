@@ -46,12 +46,12 @@
       ```
 1. Type inference
      
-      ```javascript
-
-           const add = (a: number, b: number) => {
-            /* The return value is used to determine
-               the return type of the function */
-            return a + b;
-          }
-        
-      ``` 
+      - Variables' type can be inferred based on their assigned value and their usage
+     
+          ```javascript
+               const add = (a: number, b: number) => {
+                /* The return value is used to determine
+                   the return type of the function */
+                return a + b;
+              }
+          ``` 
