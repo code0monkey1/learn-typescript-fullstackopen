@@ -53,6 +53,7 @@
                 /* The return value is used to determine
                    the return type of the function */
                 return a + b;
+                // inferred return type ( number )
               }
           ``` 
 1. Type erasure 
