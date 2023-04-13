@@ -83,4 +83,8 @@
          const myCanvas = <HTMLCanvasElement>document.getElementById("main_canvas");
 
         ```
-      - TypeScript only allows type assertions which convert to a more specific or less specific version of a type. This rule prevents “impossible” coercions like:
+      - TypeScript only allows type assertions which convert to a **more specific or less specific version of a type**. This rule _prevents “impossible” coercions_ like:
+          
+          `const x = "hello" as number;`
+
+          >Conversion of type 'string' to type 'number' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
