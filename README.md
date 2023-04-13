@@ -141,11 +141,13 @@
             > const isTruthy2 = !!myOtherVar; //false   
             >
   
-        + The following values are coerced to false 
-           -  0
-           -  NaN
-           - "" (the empty string)
-           - 0n (the bigint version of zero)
-           - null
-           - undefined
-      1. **instanceof narrowing**
+           + The following values are coerced to false 
+              -  0
+              -  NaN
+              - "" (the empty string)
+              - 0n (the bigint version of zero)
+              - null
+              - undefined
+     
+      2. **instanceof narrowing**
+           - This only works for identifying 
