@@ -307,6 +307,6 @@
           `Color
            type, say 'yellow'`, and `forget to add a corresponding case` in the switch statement, TypeScript would throw a `compile-time error`. This is because we have not covered all possible cases of the 
           Color
-           type, and TypeScript wants `to ensure that we handle all cases`.
-
+           type, and TypeScript wants `to ensure that we handle all cases`.  
+          >`Error : Type 'Yellow' is not assignable to type 'never'.`    
 ---
