@@ -208,3 +208,37 @@
                 printAnimal(myDog); // "Fido is a Labrador dog"
                 printAnimal(myCat); // "Whiskers is a gray cat"
              ```
+            + In this example, we have two custom defined types: 
+                    `Dog
+                     and 
+                    Cat`
+                    . We also have a function called 
+                    `isDog`
+                     that takes an 
+                    animal
+                     parameter of type 
+                    `Dog | Cat`
+                     and returns a boolean value. The function checks if the 
+                    animal
+                     parameter is a 
+                    Dog
+                     by checking if it has a 
+                    breed
+                     property.
+            + We then have a 
+                printAnimal
+                 function that takes an 
+                animal
+                 parameter of type 
+               `Dog | Cat`
+                . Within the function, we use the 
+                `isDog`
+                 type guard to `narrow the type of 
+                animal
+                 to 
+                Dog`
+                 if it is a dog, or to 
+                Cat
+                 if it is a cat. We can `then safely access` the `properties` of the 
+                animal
+                 object `based on its type`.
