@@ -311,3 +311,8 @@
           
           >`Error : Type 'Yellow' is not assignable to type 'never'.`    
 
+     ---
+
+     ## CONFIG 
+
+     1. 
