@@ -71,3 +71,4 @@ function logAnything<T>(value: T): void{
 let arr ="hello"
 
 logAnything(arr)
+
