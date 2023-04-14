@@ -57,3 +57,17 @@ function printAnimal(animal: Dog | Cat) {
 
 printAnimal(myDog); // "Fido is a Labrador dog"
 printAnimal(myCat); //
+
+function logAnything<T>(value: T): void{
+
+   if (Array.isArray(value)) 
+     value.forEach((item) => console.log(item))   
+   else
+    console.log(value)
+   
+}
+
+
+let arr ="hello"
+
+logAnything(arr)
