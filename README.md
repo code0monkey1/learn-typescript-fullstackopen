@@ -221,7 +221,7 @@
                     animal
                      `parameter is a Dog by checking if it has a breed property`.
             + We then have a 
-                printAnimal
+                `printAnimal`
                  function that takes an 
                 animal
                  parameter of type 
