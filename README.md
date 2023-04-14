@@ -72,7 +72,7 @@
 
 ### Typescript Gotcha 
   
-  + > Even though you many not see any Typescript compile time errors, you can still come in to some kind of runtime error.
+ > Even though you many not see any Typescript compile time errors, you can still come in to some kind of runtime error.
     >
     > This generally is seen in typescript apps the app is dealing with data request from external api's , whose data is not _known_ or _properly defined_ by the developer in the client  APP. 
     >
@@ -308,5 +308,6 @@
            type, say 'yellow'`, and `forget to add a corresponding case` in the switch statement, TypeScript would throw a `compile-time error`. This is because we have not covered all possible cases of the 
           Color
            type, and TypeScript wants `to ensure that we handle all cases`.  
+          
           >`Error : Type 'Yellow' is not assignable to type 'never'.`    
----
+
