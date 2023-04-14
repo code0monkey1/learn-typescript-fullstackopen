@@ -170,4 +170,11 @@
               }
               
              ``` 
-        1. 
+        1. User define type guards 
+           >A type guard is a function that returns a boolean value and has a special return type of       
+            `variableName is Type`
+            , where 
+            variableName
+             is the name of the variable being checked and 
+            Type
+             is the type you want to narrow it to.
