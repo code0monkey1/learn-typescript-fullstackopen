@@ -239,6 +239,8 @@
                  object `based on its type`.
       
       1. **Discriminated Union**
+         
+         - Using a discriminated union, and can narrow out the members of the union.
    
             ```javascript
               interface Circle {
@@ -267,3 +269,4 @@
                 }
 
             ```
+          - In this case, `kind` was that _common property_ (which is what’s considered a discriminant property of Shape). Checking whether the kind property was "circle" got rid of every type in Shape that didn’t have a kind property with the type _"circle"_. That `narrowed shape down to the type Circle`. 
