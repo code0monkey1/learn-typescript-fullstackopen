@@ -280,5 +280,27 @@
           type** :
           When narrowing, you can reduce the options of a union to a point where you have removed all possibilities and have nothing left. In those cases, TypeScript will use a never type to _**represent a state which shouldn’t exist**_.
 
-          -
+          - Using 
+          never
+           in the 
+          default
+           case is a powerful way to ensure that our code is exhaustive and catches errors at compile-time.
+
+              ```javascript
+              type Color = 'red' | 'green' | 'blue';
+
+            function getColorName(color: Color) {
+                switch (color) {
+                  case 'red':
+                    return 'Red';
+                  case 'green':
+                    return 'Green';
+                  case 'blue':
+                    return 'Blue';
+                  default:
+                    const exhaustiveCheck: never = color;
+                    return exhaustiveCheck;
+                }
+            }
+              ```
 
