@@ -270,3 +270,9 @@
 
             ```
           - In this case, `kind` was that _common property_ (which is what’s considered a discriminant property of Shape). Checking whether the kind property was "circle" got rid of every type in Shape that didn’t have a kind property with the type _"circle"_. That `narrowed shape down to the type Circle`. 
+          -  From there, the type system was able to do the “right” thing and figure out the types in each branch of our switch statement.
+> *
+The
+never
+type
+When narrowing, you can reduce the options of a union to a point where you have removed all possibilities and have nothing left. In those cases, TypeScript will use a never type to represent a state which shouldn’t exist*.
