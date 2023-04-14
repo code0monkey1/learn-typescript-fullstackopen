@@ -239,3 +239,31 @@
                  object `based on its type`.
       
       1. **Discriminated Union**
+   
+            ```javascript
+              interface Circle {
+                  kind: "circle";
+                  radius: number;
+                }
+                 
+                interface Square {
+                  kind: "square";
+                  sideLength: number;
+                }
+                 
+                type Shape = Circle | Square;
+
+              function getArea(shape: Shape) {
+                  switch (shape.kind) {
+                    case "circle":
+                      return Math.PI * shape.radius ** 2;
+                                        
+                       // shape: Circle
+                      case "square":
+                        return shape.sideLength ** 2;
+                                
+                     // shape: Square
+                    }
+                }
+
+            ```
