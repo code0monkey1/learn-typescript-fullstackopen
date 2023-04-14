@@ -237,3 +237,5 @@
                  if it is a cat. We can `then safely access` the `properties` of the 
                 animal
                  object `based on its type`.
+      
+      1. **Discriminated Union**
