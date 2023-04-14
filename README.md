@@ -217,14 +217,9 @@
                      that takes an 
                     animal
                      parameter of type 
-                    `Dog | Cat`
-                     and returns a boolean value. The function checks if the 
+                    Dog | Cat and returns a boolean value. The   `function checks if` the 
                     animal
-                     parameter is a 
-                    Dog
-                     by checking if it has a 
-                    breed
-                     property.
+                     `parameter is a Dog by checking if it has a breed property`.
             + We then have a 
                 printAnimal
                  function that takes an 
