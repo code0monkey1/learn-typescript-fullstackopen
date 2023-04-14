@@ -68,6 +68,10 @@ function logAnything<T>(value: T): void{
 }
 
 
+const isArray =(value:any):value is Dog =>{
+     return (value as Dog).breed !== undefined
+}
+
 let arr ="hello"
 
 logAnything(arr)
