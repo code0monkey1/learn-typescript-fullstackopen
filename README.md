@@ -313,6 +313,10 @@
 
      ---
 
-     ## CONFIG 
+ ## CONFIG 
 
-     1. 
+  1. You can `install` both `ts-node` and the official `typescript` package `globally` by running
+      ```bash 
+           npm install -g ts-node typescript       
+      ```
+  1. 
