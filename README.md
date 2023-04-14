@@ -321,3 +321,11 @@
          ```bash 
               npm install -g ts-node typescript       
          ```
+  1. Add a configuration file `tsconfig.json` to the project with the following content
+     ```json
+           {
+        "compilerOptions":{
+          "noImplicitAny": false
+        }
+      }
+     ```
