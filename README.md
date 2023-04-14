@@ -166,11 +166,11 @@
                   return animal.swim();
                 }
                
-                return animal.fly();
+                return animal.fly ();
               }
               
              ``` 
-        1. User define type guards 
+        1. **User defined type guards** 
            >A type guard is a function that returns a boolean value and has a special return type of       
             `variableName is Type`
             , where 
