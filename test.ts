@@ -29,7 +29,7 @@ function addNumbers( numbers: MyType | number[] ) {
         return numbers.a + numbers.b;
     }
     
-    return numbers.reduce((total,current) => total + current,0)
+    return numbers.reduce((total,current) => total + current)
     
 }
 
