@@ -20,7 +20,7 @@ interface MyType{
 }
 
 const isMyType = (type:any): type is MyType => {
-     return true;
+     return (type as MyType).a !==undefined && (type as MyType).b !==undefined
 } 
 
 function addNumbers( numbers: MyType | number[] ) {
