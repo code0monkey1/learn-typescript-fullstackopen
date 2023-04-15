@@ -24,12 +24,17 @@ const isMyType = (type:any): type is MyType => {
 } 
 
 function addNumbers( numbers: MyType | number[] ) {
+  console.log(numbers)
 
     if ( isMyType(numbers) ) {
         return numbers.a + numbers.b;
     }
-    
-    return numbers.reduce((total,current) => total + current)
+    console.log(numbers)
+    return numbers.reduce((total,current) =>  {
+      console.log("total: " + total)
+      console.log("current: " + current)
+      return total + current
+    })
     
 }
 
