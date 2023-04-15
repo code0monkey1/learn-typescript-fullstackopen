@@ -19,10 +19,14 @@ interface MyType{
   b: number
 }
 
+const isMyType = (type:any): type is MyType => {
+     return true;
+} 
+
 function addNumbers( numbers: MyType | number[] ) {
 
-    if ( numbers instanceof Date ) {
-
+    if ( isMyType(numbers) ) {
+        return numbers.a + numbers.b;
     }
 }
 
