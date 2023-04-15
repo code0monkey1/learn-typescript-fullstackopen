@@ -28,8 +28,19 @@ function addNumbers( numbers: MyType | number[] ) {
     if ( isMyType(numbers) ) {
         return numbers.a + numbers.b;
     }
+    
+    return numbers.reduce((total,current) => total + current,0)
+    
 }
 
+const addition :MyType ={
+   a:10,
+   b:20
+}
+
+console.log(addNumbers(addition))
+
+console.log(addNumbers([4,5,6,7,8,9,10,11,12]))
 interface Dog {
   name: string;
   breed: string;
