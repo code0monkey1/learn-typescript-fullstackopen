@@ -27,9 +27,10 @@ function addNumbers( numbers: MyType | number[] ) {
   console.log(numbers)
 
     if ( isMyType(numbers) ) {
+      console.log("numbers is MyType : ",numbers)
         return numbers.a + numbers.b;
     }
-    console.log(numbers)
+    
     return numbers.reduce((total,current) =>  {
       console.log("total: " + total)
       console.log("current: " + current)
