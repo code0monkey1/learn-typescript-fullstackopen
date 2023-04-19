@@ -106,4 +106,4 @@ let arr ="hello"
 
 logAnything(arr)
 
-console.log(isFish({name:"fishy"}))
+console.log(isFish({name:"fishy"})?"is fish":"is another animal")
