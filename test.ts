@@ -19,7 +19,7 @@ interface MyType{
   b: number
 }
 type Fish={
-  
+
    name: string,
    swim:()=>void
 
@@ -64,6 +64,10 @@ interface Cat {
 
 class Farm {
    constructor(name: string, age: number){ }
+}
+
+const isFish=(animal:any):animal is Fish=>{
+     return 'swim' in animal 
 }
 
 function isDog(animal: Dog | Cat): animal is Dog {
