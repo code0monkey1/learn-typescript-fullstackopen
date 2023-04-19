@@ -312,7 +312,11 @@
           >`Error : Type 'Yellow' is not assignable to type 'never'.`    
 
      ---
-
+     
+     >Tip : To ignore any typescript error , if you don't find a quick fix for it ... just put `//@ts-ignore` on top of the line giving the ts `error`   
+     ![ignore-typescript-errors](./pics/ignore-typescript-error.jpg)
+      
+      ---
  ## CONFIG 
   
   1. By using the npm package `ts-node`. It compiles and `executes` the specified `TypeScript file immediately` so that there is `no` need for a `separate compilation step`.  <br><br>
@@ -321,7 +325,7 @@
          ```bash 
               npm install -g ts-node typescript       
          ```
-  1. Add a configuration file `tsconfig.json` to the project with the following content
+  2. Add a configuration file `tsconfig.json` to the project with the following content
      ```json
            {
         "compilerOptions":{
