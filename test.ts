@@ -18,7 +18,12 @@ interface MyType{
   a:number
   b: number
 }
+type Fish={
+  
+   name: string,
+   swim:()=>void
 
+}
 const isMyType = (type:any): type is MyType => {
      return "a" in type && "b" in type
 } 
