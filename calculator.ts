@@ -36,9 +36,10 @@ const calculator=(a:number,b:number,operation:Operation):number =>{ //number|str
    
 //    return err instanceof Error
 // }
+const [a,b,operation] = process.argv.slice(2)
 
 try {
-  console.log(calculator(1, 0 , 'divide'));
+  console.log(calculator(Number(a),Number(b) , operation as Operation));
  // Since the default type of the error object in TypeScript is unknown, we have to narrow the type to access the field:
 } catch (error: unknown) {
   let errorMessage = 'Something went wrong: '
@@ -49,5 +50,3 @@ try {
 }
 
 // accessing the command line arguments 
-
-console.log(process.argv.slice(2))
