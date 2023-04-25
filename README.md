@@ -412,6 +412,7 @@ So we have to `narrow the type` to access the `message` field like so :_
 
    ```
 
+---
 ### Accessing command line arguments :
  
   We can do that using : `process.argv`  
@@ -423,7 +424,36 @@ So we have to `narrow the type` to access the `message` field like so :_
   > So i this case we'll get an array of 2 strings ['4','5']
 )
 
+---
 
+## Validating data obtained from external sources :
+
+validate the data given to us from the command line, to avoid invalid data from external sources.
+
+```javascript
+
+  interface MultiplyValues {
+    value1: number;
+    value2: number;
+  }
+  
+  const parseArguments = (args: string[]): MultiplyValues => {
+    if (args.length < 4) throw new Error('Not enough arguments');
+    if (args.length > 4) throw new Error('Too many arguments');
+  
+    if (!isNaN(Number(args[2])) && !isNaN(Number(args[3]))) {
+      return {
+        value1: Number(args[2]),
+        value2: Number(args[3])
+      }
+    } else {
+      throw new Error('Provided values were not numbers!');
+    }
+  }
+  
+```
+
+---
 ## Accessing types for the packages you use :
 `@types/ prefix.` ( always install as dev dependency )
 
@@ -433,3 +463,4 @@ For example:
 npm install --save-dev @types/react @types/express @types/lodash @types/jest @types/mongoose
 
 ```
+
