@@ -355,3 +355,18 @@
           }
   
       ```
+
+>  The VSCode plugin is so efficient, that it informs you immediately when you are trying to use an incorrect type.
+
+\-\-\-    
+[multiplication with correct and incorrect arguments](./multiplicator.ts)   
+\-\-\- 
+
+---
+
+## Creating Custom Types :   
+
+Eg : `type Operation = 'multiply' | 'add' | 'divide';`
+
+Where ever you use this as a type , you'll have to provide either of the 3 values specified , for it to be a valid assignment.
+
