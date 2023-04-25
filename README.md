@@ -327,7 +327,7 @@
          ```bash 
               npm install -g ts-node typescript       
          ```
-  3. Add a configuration file `tsconfig.json` to the project with the following content
+  1. Add a configuration file `tsconfig.json` to the project with the following content
      ```json
            {
         "compilerOptions":{
@@ -336,3 +336,17 @@
         }
       }
      ```
+ 1. You can directly use `ts-node` to execute a `typescript` file like so : `ts-node test.ts` OR you could install `ts-node` as a `dev-dependency` and run it using an `npm script` in `package.json`  , like so : `npm run ts-node test.ts`
+    
+    ```json
+
+   // package.json:  
+         {
+
+        "scripts": {
+          "ts-node": "ts-node"
+          },
+        
+        }
+
+    ```
