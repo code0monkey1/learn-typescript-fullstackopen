@@ -103,7 +103,7 @@
 
   1. #### Narrowing :
       
-      1. **typeOf type Guards** : 
+      1. **typeof type Guards** : 
           1. "string"
           2. "number"
           3. "bigint"
