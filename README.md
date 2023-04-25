@@ -318,8 +318,10 @@
       
       ---
  ## CONFIG 
-  
-1. By using the npm package `ts-node`. It compiles and `executes` the specified `TypeScript file immediately` so that there is `no` need for a `separate compilation step`. ( Good for testing , but not to be used in production) 
+
+1. Use `npm init -y` to  initialize a new node project
+   
+1. By using the npm package `ts-node`, you can compile and `executes` the specified `TypeScript file immediately` so that there is `no` need for a `separate compilation step`. ( Good for testing , but not to be used in production) 
    <br/>
    <br/>
    
@@ -356,11 +358,11 @@
   
       ```
 
->  The VSCode plugin is so efficient, that it informs you immediately when you are trying to use an incorrect type.
-
-\-\-\-    
-[multiplication with correct and incorrect arguments](./multiplicator.ts)   
-\-\-\- 
+    >  The VSCode plugin is so efficient, that it informs you immediately when you are trying to use an incorrect type.
+    
+    \-\-\-    
+    [multiplication with correct and incorrect arguments](./multiplicator.ts)   
+    \-\-\- 
 
 ---
 
