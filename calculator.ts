@@ -27,10 +27,19 @@ const calculator=(a:number,b:number,operation:Operation):number =>{ //number|str
        default: // to be used in case of external values , i.e the value for `operation` is coming from an external api, which is not guaranteed to be of given type.
 
       throw new Error('Operation is not multiply, add or divide!');
-      
+      // this is to be caught by the calling code using try-catch
     }
 
 }
 
 
-console.log(calculator(4,3,'add'))
+
+try {
+  console.log(calculator(1, 0 , 'divide'));
+} catch (error: unknown) {
+  let errorMessage = 'Something went wrong: '
+  if (error instanceof Error) { // the instanceof narrowing is required , else you cannot access the error 'message' property
+    errorMessage += error.message;
+  }
+  console.log(errorMessage);
+}
