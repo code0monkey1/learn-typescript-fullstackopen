@@ -32,10 +32,10 @@ const calculator=(a:number,b:number,operation:Operation):number =>{ //number|str
 
 }
 
-const isError = (err: unknown): err is Error=>{
+// const isError = (err: unknown): err is Error=>{
    
-   return err instanceof Error
-}
+//    return err instanceof Error
+// }
 
 try {
   console.log(calculator(1, 0 , 'divide'));
@@ -45,7 +45,9 @@ try {
   if (error instanceof Error) { // the instanceof narrowing is required , else you cannot access the error 'message' property
     errorMessage += error.message;
   }
-  console.log(errorMessage,);
+  console.log(errorMessage);
 }
 
-console.log(process.argv)
+// accessing the command line arguments 
+
+console.log(process.argv.slice(2))
