@@ -319,13 +319,15 @@
       ---
  ## CONFIG 
   
-  1. By using the npm package `ts-node`. It compiles and `executes` the specified `TypeScript file immediately` so that there is `no` need for a `separate compilation step`.  <br><br>
+  1. By using the npm package `ts-node`. It compiles and `executes` the specified `TypeScript file immediately` so that there is `no` need for a `separate compilation step`. ( Good for testing , but not to be used in production) 
+   <br/>
+   <br/>
    
       -  You can `install` both `ts-node` and the official `typescript` package `globally` by running
          ```bash 
               npm install -g ts-node typescript       
          ```
-  2. Add a configuration file `tsconfig.json` to the project with the following content
+  3. Add a configuration file `tsconfig.json` to the project with the following content
      ```json
            {
         "compilerOptions":{
