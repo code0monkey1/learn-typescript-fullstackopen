@@ -284,7 +284,7 @@
           never`
            `in` the 
           `default
-           cas` is a powerful `way to ensure that our code is exhaustive` and `catches errors at compile-time`.
+           case` is a powerful `way to ensure that our code is exhaustive` and `catches errors at compile-time`.
 
               ```javascript
               type Color = 'red' | 'green' | 'blue';
