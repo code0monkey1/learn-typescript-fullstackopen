@@ -405,12 +405,18 @@ So we have to `narrow the type` to access the `message` field like so :_
   }
   
 ```
+
+###  Nullish Coalescing ( not specifically a typescript feature , but  a part of native javascript ) :
+  
+  If the `lsh` is true , then the LHS will be applied ,but if it's false, then the RHS will be applied
+
+  ![Nullish Coalescing](./pics/nullish-coalasing.jpg "nullish coalescing")
 ---
- ## CONFIG 
+ ## CONFIG  
 
 1. Use `npm init -y` to  initialize a new node project
    
-1. By using the npm package `ts-node`, you can compile and `executes` the specified `TypeScript file immediately` so that there is `no` need for a `separate compilation step`. ( Good for testing , but not to be used in production) 
+2. By using the npm package `ts-node`, you can compile and `executes` the specified `TypeScript file immediately` so that there is `no` need for a `separate compilation step`. ( Good for testing , but not to be used in production) 
    <br/>
    <br/>
    
@@ -418,7 +424,7 @@ So we have to `narrow the type` to access the `message` field like so :_
          ```bash 
               npm install -g ts-node typescript       
          ```
-1. Add a configuration file `tsconfig.json` to the project with the following content.  
+3. Add a configuration file `tsconfig.json` to the project with the following content.  
   The tsconfig.json file is used to 
    + define how the TypeScript compiler should interpret the code
    +  how strictly the compiler should work
