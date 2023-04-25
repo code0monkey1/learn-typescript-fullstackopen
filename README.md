@@ -428,7 +428,7 @@ So we have to `narrow the type` to access the `message` field like so :_
 
 ## Validating data obtained from external sources :
 
-validate the data given to us from the command line, to avoid invalid data from external sources.
+`validate the data given to us from the command line, to avoid invalid data from external sources.`
 
 ```javascript
 
@@ -442,7 +442,7 @@ validate the data given to us from the command line, to avoid invalid data from 
     if (args.length < 5) throw new Error('Not enough arguments');
     if (args.length > 5) throw new Error('Too many arguments');
   
-    if (!isNaN(Number(args[2])) && !isNaN(Number(args[3]) !isNaN(Number(args[4]))) {
+    if (!isNaN(Number(args[2])) && !isNaN(Number(args[3])  && (typeof args[4] === 'string'))) {
       return {
         value1: Number(args[2]),
         value2: Number(args[3]),

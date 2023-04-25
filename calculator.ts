@@ -1,6 +1,5 @@
 export type Operation = 'add'|'subtract'|'multiply'|'divide'
 
-
   interface MultiplyValues {
     value1: number;
     value2: number;
@@ -8,14 +7,14 @@ export type Operation = 'add'|'subtract'|'multiply'|'divide'
   }
   
   const parseArguments = (args: string[]): MultiplyValues => {
-    if (args.length < 4) throw new Error('Not enough arguments');
-    if (args.length > 4) throw new Error('Too many arguments');
+    if (args.length < 5) throw new Error('Not enough arguments');
+    if (args.length > 5) throw new Error('Too many arguments');
   
-    if (!isNaN(Number(args[2])) && !isNaN(Number(args[3])) && !isNaN(Number(args[4]))) {
+    if (!isNaN(Number(args[2])) && !isNaN(Number(args[3])) && (typeof args[4] === 'string')) {
       return {
         value1: Number(args[2]),
         value2: Number(args[3]),
-       operation : args[4]
+        operation : args[4]
       }
     } else {
       throw new Error('Provided values were not numbers!');
