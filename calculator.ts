@@ -23,8 +23,11 @@ const calculator=(a:number,b:number,operation:Operation):number =>{ //number|str
       
       //   const exhaustiveCheck: never = operation;
       //   return exhaustiveCheck;
-       default: // to be used in case of external values
+
+       default: // to be used in case of external values , i.e the value for `operation` is coming from an external api, which is not guaranteed to be of given type.
+
       throw new Error('Operation is not multiply, add or divide!');
+      
     }
 
 }
