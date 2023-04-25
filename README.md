@@ -319,7 +319,7 @@
       ---
  ## CONFIG 
   
-  1. By using the npm package `ts-node`. It compiles and `executes` the specified `TypeScript file immediately` so that there is `no` need for a `separate compilation step`. ( Good for testing , but not to be used in production) 
+1. By using the npm package `ts-node`. It compiles and `executes` the specified `TypeScript file immediately` so that there is `no` need for a `separate compilation step`. ( Good for testing , but not to be used in production) 
    <br/>
    <br/>
    
@@ -327,26 +327,31 @@
          ```bash 
               npm install -g ts-node typescript       
          ```
-  1. Add a configuration file `tsconfig.json` to the project with the following content
-     ```json
-           {
-        "compilerOptions":{
-          "noImplicitAny": false // this will allow  'any' type to exist . 
-                                 // If this is turned to true ,you will have to explicitly specify every type
+1. Add a configuration file `tsconfig.json` to the project with the following content.  
+  The tsconfig.json file is used to 
+   + define how the TypeScript compiler should interpret the code
+   +  how strictly the compiler should work
+   +  which files to watch or ignore
+   
+    ```json
+             {
+          "compilerOptions":{
+            "noImplicitAny": false // this will allow  'any' type to exist . 
+                                   // If this is turned to true ,you will have to explicitly specify every type
+          }
         }
-      }
-     ```
+    ```
  1. You can directly use `ts-node` to execute a `typescript` file like so : `ts-node test.ts` OR you could install `ts-node` as a `dev-dependency` and run it using an `npm script` in `package.json`  , like so : `npm run ts-node test.ts`
     
-    ```json
-
-   // package.json:  
-         {
-
-        "scripts": {
-          "ts-node": "ts-node"
-          },
-        
-        }
-
-    ```
+      ```json
+  
+     // package.json:  
+           {
+  
+          "scripts": {
+            "ts-node": "ts-node"
+            },
+          
+          }
+  
+      ```
