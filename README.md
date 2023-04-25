@@ -411,3 +411,8 @@ So we have to `narrow the type` to access the `message` field like so :_
     }
 
    ```
+
+### Accessing command line arguments :
+ 
+  `process.argv`
+

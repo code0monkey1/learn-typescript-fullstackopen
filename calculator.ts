@@ -47,3 +47,5 @@ try {
   }
   console.log(errorMessage,);
 }
+
+console.log(process.argv)
