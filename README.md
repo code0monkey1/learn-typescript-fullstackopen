@@ -376,13 +376,12 @@ Where ever you use this as a type , you'll have to provide either of the 3 value
 
 ## Error Handling in TypeScript : 
 
-> _*Unknown* :  The `unknown` is a `type` that was introduced to be the type-safe counterpart of `any`._  
+> _*Unknown* :  The `unknown` was introduced to be the type-safe counterpart of `any`._  
 > 
-> _Anything is assignable to unknown, but `unknown isn’t assignable to anything but itself and any` without a type assertion or a control flow-based narrowing. Likewise, no `operations are permitted on an unknown without first asserting or narrowing it` to a more specific type._
+> _Anything is assignable to unknown and no `operations are permitted on an unknown without first asserting or narrowing it` to a more specific type._
 
-
-The `default type` of the `error object` in TypeScript is `unknown`.   
-So we have to `narrow the type` to access the `message` field like so :
+_The `default type` of the `error object` in TypeScript is `unknown`.     
+So we have to `narrow the type` to access the `message` field like so :_
    
    ```javascript
      try{
