@@ -1,6 +1,26 @@
 export type Operation = 'add'|'subtract'|'multiply'|'divide'
 
 
+  interface MultiplyValues {
+    value1: number;
+    value2: number;
+    operation:string;
+  }
+  
+  const parseArguments = (args: string[]): MultiplyValues => {
+    if (args.length < 4) throw new Error('Not enough arguments');
+    if (args.length > 4) throw new Error('Too many arguments');
+  
+    if (!isNaN(Number(args[2])) && !isNaN(Number(args[3])) && !isNaN(Number(args[4]))) {
+      return {
+        value1: Number(args[2]),
+        value2: Number(args[3]),
+       operation : args[4]
+      }
+    } else {
+      throw new Error('Provided values were not numbers!');
+    }
+  }
 
 const calculator=(a:number,b:number,operation:Operation):number =>{ //number|string ( return type if returning string too)
 
@@ -36,10 +56,10 @@ const calculator=(a:number,b:number,operation:Operation):number =>{ //number|str
    
 //    return err instanceof Error
 // }
-const [a,b,operation] = process.argv.slice(2)
+const {value1,value2,operation} = parseArguments(process.argv)
 
 try {
-  console.log(calculator(Number(a),Number(b) , operation as Operation));
+  console.log(calculator(value1,value2 , operation as Operation));
  // Since the default type of the error object in TypeScript is unknown, we have to narrow the type to access the field:
 } catch (error: unknown) {
   let errorMessage = 'Something went wrong: '
