@@ -14,6 +14,7 @@ const calculator=(a:number,b:number,operation:Operation) =>{
       case 'divide':
         return a/b;
       default:
+        // this ensure that if a new operation is added to the operation type , a corresponding switch statement is always added to correspond to it , else the exhaustiveCheck will catch it .
         const exhaustiveCheck: never = operation;
         return exhaustiveCheck;
     }
