@@ -414,5 +414,22 @@ So we have to `narrow the type` to access the `message` field like so :_
 
 ### Accessing command line arguments :
  
-  `process.argv`
+  We can do that using : `process.argv`  
 
+  > ( accessing the command line arguments 
+  > console.log(process.argv.slice(2)) 
+  >  will get the two command line values given in ( ts-node calculator.js 4 5)
+  > 
+  > So i this case we'll get an array of 2 strings ['4','5']
+)
+
+
+## Accessing types for the packages you use :
+`@types/ prefix.` ( always install as dev dependency )
+
+For example:
+```bash
+
+npm install --save-dev @types/react @types/express @types/lodash @types/jest @types/mongoose
+
+```
