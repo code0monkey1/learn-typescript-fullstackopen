@@ -338,8 +338,8 @@
     ```json
              {
           "compilerOptions":{
-            "noImplicitAny": false // this will allow  'any' type to exist . 
-                                   // If this is turned to true ,you will have to explicitly specify every type
+            "noImplicitAny": true // this will not allow  'any' type to exist . 
+                          // If this is turned to false , the default type would be 'any'
           }
         }
     ```
