@@ -374,3 +374,41 @@ Where ever you use this as a type , you'll have to provide either of the 3 value
 > 
 > Therefore, it's still better to include error handling and be prepared for the unexpected to happen, when getting data from external sources.
 
+## Error Handling in TypeScript : 
+
+> _*Unknown* :  The `unknown` is a `type` that was introduced to be the type-safe counterpart of `any`._  
+> 
+> _Anything is assignable to unknown, but `unknown isn’t assignable to anything but itself and any` without a type assertion or a control flow-based narrowing. Likewise, no `operations are permitted on an unknown without first asserting or narrowing it` to a more specific type._
+
+
+The `default type` of the `error object` in TypeScript is `unknown`.   
+So we have to `narrow the type` to access the `message` field like so :
+   
+   ```javascript
+     try{
+
+     }
+     catch (error: unknown) {
+
+      let errorMessage = 'Something went wrong: '
+
+      // here we can not use error.message
+      
+      //Here the narrowing was done with the instanceof type guard   
+      if (error instanceof Error) { 
+     
+        //  narrowing through type assertion will also work
+        
+        //  const err =error as Error
+        //  console.log(err.message)
+
+        // the type is now narrowed to Error and we can refer to error.message
+         errorMessage += error.message;
+        }
+
+        // here we can not use error.message
+    
+        console.log(errorMessage);
+    }
+
+   ```

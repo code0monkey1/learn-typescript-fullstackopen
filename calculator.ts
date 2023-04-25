@@ -32,14 +32,18 @@ const calculator=(a:number,b:number,operation:Operation):number =>{ //number|str
 
 }
 
-
+const isError = (err: unknown): err is Error=>{
+   
+   return err instanceof Error
+}
 
 try {
   console.log(calculator(1, 0 , 'divide'));
+ // Since the default type of the error object in TypeScript is unknown, we have to narrow the type to access the field:
 } catch (error: unknown) {
   let errorMessage = 'Something went wrong: '
   if (error instanceof Error) { // the instanceof narrowing is required , else you cannot access the error 'message' property
     errorMessage += error.message;
   }
-  console.log(errorMessage);
+  console.log(errorMessage,);
 }
