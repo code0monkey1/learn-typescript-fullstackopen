@@ -2,7 +2,8 @@ export type Operation = 'add'|'subtract'|'multiply'|'divide'
 
 
 
-const calculator=(a:number,b:number,operation:Operation) =>{
+const calculator=(a:number,b:number,operation:Operation):number|string =>{
+
     
     switch(operation){
       case 'add' :
@@ -12,6 +13,8 @@ const calculator=(a:number,b:number,operation:Operation) =>{
       case 'multiply':
         return a*b;
       case 'divide':
+        // to account for the fact that the function might return a string , we need to put the return values likewise 
+        if(b===0) return "division cannot be performed"
         return a/b;
       default:
         // this ensure that if a new operation is added to the operation type , a corresponding switch statement is always added to correspond to it , else the exhaustiveCheck will catch it .
