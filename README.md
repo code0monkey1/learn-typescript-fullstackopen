@@ -316,56 +316,6 @@
      >Tip : To ignore any typescript error , if you don't find a quick fix for it ... just put `//@ts-ignore` on top of the line giving the ts `error`   
      ![ignore-typescript-errors](./pics/ignore-typescript-error.jpg)
       
-      ---
- ## CONFIG 
-
-1. Use `npm init -y` to  initialize a new node project
-   
-1. By using the npm package `ts-node`, you can compile and `executes` the specified `TypeScript file immediately` so that there is `no` need for a `separate compilation step`. ( Good for testing , but not to be used in production) 
-   <br/>
-   <br/>
-   
-      -  You can `install` both `ts-node` and the official `typescript` package `globally` by running
-         ```bash 
-              npm install -g ts-node typescript       
-         ```
-1. Add a configuration file `tsconfig.json` to the project with the following content.  
-  The tsconfig.json file is used to 
-   + define how the TypeScript compiler should interpret the code
-   +  how strictly the compiler should work
-   +  which files to watch or ignore
-   
-    ```json
-             {
-          "compilerOptions":{
-            "noImplicitAny": true // this will not allow  'any' type to exist . 
-                          // If this is turned to false , the default type would be 'any'
-          }
-        }
-    ```
- 1. You can directly use `ts-node` to execute a `typescript` file like so : `ts-node test.ts` OR you could install `ts-node` as a `dev-dependency` and run it using an `npm script` in `package.json`  , like so : `npm run ts-node test.ts`
-    
-      ```json
-  
-     // package.json:  
-           {
-  
-          "scripts": {
-            "ts-node": "ts-node"
-            },
-          
-          }
-  
-      ```
-
-    >  The VSCode plugin is so efficient, that it informs you immediately when you are trying to use an incorrect type.
-    
-    \-\-\-    
-    [multiplication with correct and incorrect arguments](./multiplicator.ts)   
-    \-\-\- 
-
----
-
 ## Creating Custom Types :   
 
 Eg : `type Operation = 'multiply' | 'add' | 'divide';`
@@ -413,7 +363,6 @@ So we have to `narrow the type` to access the `message` field like so :_
     }
 
    ```
-
 ---
 ### Accessing command line arguments :
  
@@ -456,15 +405,63 @@ So we have to `narrow the type` to access the `message` field like so :_
   }
   
 ```
-
 ---
-## Accessing types for the packages you use :
+ ## CONFIG 
+
+1. Use `npm init -y` to  initialize a new node project
+   
+1. By using the npm package `ts-node`, you can compile and `executes` the specified `TypeScript file immediately` so that there is `no` need for a `separate compilation step`. ( Good for testing , but not to be used in production) 
+   <br/>
+   <br/>
+   
+      -  You can `install` both `ts-node` and the official `typescript` package `globally` by running
+         ```bash 
+              npm install -g ts-node typescript       
+         ```
+1. Add a configuration file `tsconfig.json` to the project with the following content.  
+  The tsconfig.json file is used to 
+   + define how the TypeScript compiler should interpret the code
+   +  how strictly the compiler should work
+   +  which files to watch or ignore
+   
+    ```json
+             {
+          "compilerOptions":{
+            "noImplicitAny": true // this will not allow  'any' type to exist . 
+                          // If this is turned to false , the default type would be 'any'
+          }
+        }
+    ```
+ 1. You can directly use `ts-node` to execute a `typescript` file like so : `ts-node test.ts` OR you could install `ts-node` as a `dev-dependency` and run it using an `npm script` in `package.json`  , like so : `npm run ts-node test.ts`
+    
+      ```json
+  
+     // package.json:  
+           {
+  
+          "scripts": {
+            "ts-node": "ts-node"
+            },
+          
+          }
+  
+      ```
+
+    >  The VSCode plugin is so efficient, that it informs you immediately when you are trying to use an incorrect type.
+    
+    \-\-\-    
+    [multiplication with correct and incorrect arguments](./multiplicator.ts)   
+    \-\-\- 
+
+
+
+1. Installing types for the packages you use :
 `@types/ prefix.` ( always install as dev dependency )
 
-For example:
-```bash
-
-npm install --save-dev @types/react @types/express @types/lodash @types/jest @types/mongoose
-
-```
+    For example:
+    ```bash
+    
+    npm install --save-dev @types/react @types/express @types/lodash @types/jest @types/mongoose
+    
+    ```
 
