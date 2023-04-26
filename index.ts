@@ -1,3 +1,6 @@
+// using the import statement will lead to the req and res to automatically
+// infer the types
+
 import express from 'express';
 
 const app = express();
