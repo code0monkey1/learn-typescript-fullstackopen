@@ -411,6 +411,13 @@ So we have to `narrow the type` to access the `message` field like so :_
   If the `lsh` is true , then the LHS will be applied ,but if it's false, then the RHS will be applied
 
   ![Nullish Coalescing](./pics/nullish-coalasing.jpg "nullish coalescing")
+
+---
+
+>TypeScript Quirk: somehow surprisingly TypeScript does not allow to define the same variable in many files at a "block-scope", that is, outside functions (or classes):
+>
+>`This is actually not quite true`. This rule applies only to files that are treated as "scripts". A file is a script if it does not contain any export or import statements. If a file has those, then the file is treated as a module, and the variables do not get defined in the block-scope.
+
 ---
  ## CONFIG  
 
