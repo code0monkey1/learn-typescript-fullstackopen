@@ -2,6 +2,8 @@
 // infer the types
 
 import express from 'express';
+import qs from 'qs';
+
 
 const app = express();
 
