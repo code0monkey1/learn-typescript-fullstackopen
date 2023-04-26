@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/code0monkey1/learn-typescript-fullstackopen/issues"
   },
-  "homepage": "https://github.com/code0monkey1/learn-typescript-fullstackopen#readme"
+  "homepage": "https://github.com/code0monkey1/learn-typescript-fullstackopen#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.17"
+  }
 }

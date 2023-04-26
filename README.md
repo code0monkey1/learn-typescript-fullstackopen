@@ -513,21 +513,24 @@ So we have to `narrow the type` to access the `message` field like so :_
       // ..
     }
     ```
-1.create the file index.ts, and write the HTTP GET *ping endpoint to it:
+1. create the file index.ts, and write the HTTP GET *ping endpoint to it:
    
-  ```javascript
- 
-      const express = require('express');
-      const app = express();
-      
-      app.get('/ping', (req, res) => {
-        res.send('pong');
-      });
-      
-      const PORT = 3003;
-      
-      app.listen(PORT, () => {
-        console.log(`Server running on port ${PORT}`);
-      });
-     
-   ```
+    ```javascript
+       
+            const express = require('express');
+            const app = express();
+            
+            app.get('/ping', (req, res) => {
+              res.send('pong');
+            });
+            
+            const PORT = 3003;
+            
+            app.listen(PORT, () => {
+              console.log(`Server running on port ${PORT}`);
+            });
+           
+      ```
+
+1. Install the types for express :   
+   `npm install --save-dev @types/express`
