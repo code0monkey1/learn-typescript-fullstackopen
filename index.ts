@@ -2,7 +2,6 @@
 // infer the types
 
 import express from 'express';
-import qs from 'qs';
 
 
 const app = express();
@@ -10,6 +9,8 @@ const app = express();
 app.get('/ping', (_req , res) => {
   res.send('pong');
 });
+
+
 
 const PORT = 3003;
 
