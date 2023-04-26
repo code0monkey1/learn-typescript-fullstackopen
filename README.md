@@ -517,7 +517,10 @@ So we have to `narrow the type` to access the `message` field like so :_
    
     ```javascript
        
-            const express = require('express');
+            // using this import statement [ import express from 'express';]  while importing express will lead to the req and res to  automatically infer the types
+
+            import express from 'express';
+
             const app = express();
             
             app.get('/ping', (req, res) => {
@@ -531,6 +534,8 @@ So we have to `narrow the type` to access the `message` field like so :_
             });
            
       ```
+
+      >A good rule of thumb is to try importing a module using the import statement first. We will always use this method in the frontend. If import does not work, try a combined method: import ... = require('...').
 
 1. Install the types for express :   
    `npm install --save-dev @types/express`
