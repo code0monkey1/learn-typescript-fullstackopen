@@ -486,7 +486,7 @@ So we have to `narrow the type` to access the `message` field like so :_
           "target": "ES2022",
           "strict": true,
           "noUnusedLocals": true,
-          "noUnusedParameters": true,
+          "noUnusedParameters": true, // this raises an error when unused params are present . You can put an underscore on its starting `_param` to get rid of this error
           "noImplicitReturns": true,
           "noFallthroughCasesInSwitch": true,
           "noImplicitAny": true,
