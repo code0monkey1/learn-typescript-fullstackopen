@@ -539,3 +539,31 @@ So we have to `narrow the type` to access the `message` field like so :_
 
 1. Install the types for express :   
    `npm install --save-dev @types/express`
+
+1. Enable auto-reloading to improve our workflow by Installing `ts-node-dev` :
+
+      _As *nodemon* is to *node* , so is *ts-node-dev* to *ts-node*_
+    
+      `ts-node-dev takes care of recompilation on every change, so restarting the application won't be necessary.`
+      
+      ```bash
+    
+      // (Install as dev dependency)
+    
+      npm install --save-dev ts-node-dev
+      
+      ```
+
+1. Add a script to package.json:
+
+   ```json
+    {
+      // ...
+      "scripts": {
+          // ...
+          "dev": "ts-node-dev index.ts",
+      },
+      // ...
+    }
+
+   ```
