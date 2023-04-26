@@ -7,6 +7,7 @@ export type Operation = 'add'|'subtract'|'multiply'|'divide'
   }
   
   const parseArguments = (args: string[]): MultiplyValues => {
+    
     if (args.length < 5) throw new Error('Not enough arguments');
     if (args.length > 5) throw new Error('Too many arguments');
   

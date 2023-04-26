@@ -416,7 +416,7 @@ So we have to `narrow the type` to access the `message` field like so :_
 
 >TypeScript Quirk: somehow surprisingly TypeScript does not allow to define the same variable in many files at a "block-scope", that is, outside functions (or classes):
 >
->`This is actually not quite true`. This rule applies only to files that are treated as "scripts". A file is a script if it does not contain any export or import statements. If a file has those, then the file is treated as a module, and the variables do not get defined in the block-scope.
+>`This is actually not quite true`. This rule applies only to files that are treated as "scripts". A file is `a script if it does not contain any export or import statements. If a file has those, then the file is treated as a module`, and the variables do not get defined in the block-scope.
 
 ---
  ## CONFIG  
@@ -478,3 +478,21 @@ So we have to `narrow the type` to access the `message` field like so :_
     
     ```
 
+1. Let's specify the following configurations in our tsconfig.json file:
+     ```javascript
+    
+      {
+        "compilerOptions": {
+          "target": "ES2022",
+          "strict": true,
+          "noUnusedLocals": true,
+          "noUnusedParameters": true,
+          "noImplicitReturns": true,
+          "noFallthroughCasesInSwitch": true,
+          "noImplicitAny": true,
+          "esModuleInterop": true,
+          "moduleResolution": "node"
+        }
+      }
+     
+     ```
