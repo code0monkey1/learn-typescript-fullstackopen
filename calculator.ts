@@ -3,20 +3,34 @@ export type Operation = 'add'|'subtract'|'multiply'|'divide'
   interface MultiplyValues {
     value1: number;
     value2: number;
-    operation:string;
+    operation:Operation;
+  }
+
+  const isOperation =(value :string) :value is Operation =>{
+  return (operation ==='add' || operation === 'subtract' || operation === 'multiply' || operation === 'divide')
+
   }
   
+  const isValidArgs = (args:string[]) =>{
+      
+    return (isNaN(Number(args[2])) || isNaN(Number(args[3])) )
+    
+     
+  }
+
   const parseArguments = (args: string[]): MultiplyValues => {
     
     if (args.length < 5) throw new Error('Not enough arguments');
     if (args.length > 5) throw new Error('Too many arguments');
   
-    if (!isNaN(Number(args[2])) && !isNaN(Number(args[3]))) {
-      return {
-        value1: Number(args[2]),
-        value2: Number(args[3]),
-        operation : args[4]
-      }
+    if (isValidArgs(args) && isOperation(args[4])) {
+       
+        return {
+          value1: Number(args[2]),
+          value2: Number(args[3]),
+          operation : args[4] ,
+        }
+
     } else {
       throw new Error('Provided values were not numbers!');
     }
@@ -24,7 +38,6 @@ export type Operation = 'add'|'subtract'|'multiply'|'divide'
 
 const calculator=(a:number,b:number,operation:Operation):number =>{ //number|string ( return type if returning string too)
 
-    
     switch(operation){
       case 'add' :
         return a+b;
