@@ -1,4 +1,4 @@
-export type Operation = 'add'|'subtract'|'multiply'|'divide'
+export type Operation = 'add'|'subtract'|'multiply'|'divide';
 
   interface MultiplyValues {
     value1: number;
@@ -7,16 +7,16 @@ export type Operation = 'add'|'subtract'|'multiply'|'divide'
   }
 
   const isOperation =(value :string) :value is Operation =>{
-  return (value ==='add' || value === 'subtract' || value === 'multiply' || value === 'divide')
+  return (value ==='add' || value === 'subtract' || value === 'multiply' || value === 'divide');
 
-  }
+  };
   
   const isValidArgs = (args:string[]) =>{
       
-    return (isNaN(Number(args[2])) || isNaN(Number(args[3])) )
+    return (isNaN(Number(args[2])) || isNaN(Number(args[3])) );
     
      
-  }
+  };
 
 export const parseArguments = (args: string[]): MultiplyValues => {
     
@@ -29,12 +29,12 @@ export const parseArguments = (args: string[]): MultiplyValues => {
           value1: Number(args[2]),
           value2: Number(args[3]),
           operation : args[4] ,
-        }
+        };
 
     } else {
       throw new Error('Provided values were not numbers!');
     }
-  }
+  };
 
 export const calculator=(a:number,b:number,operation:Operation):number =>{ //number|string ( return type if returning string too)
     
@@ -48,7 +48,7 @@ export const calculator=(a:number,b:number,operation:Operation):number =>{ //num
         case 'divide':
           // to account for the fact that the function might return a string , we need to put the return values likewise 
           // if(b===0) return "division cannot be performed"
-          if(b===0) throw new Error("division cannot be performed")
+          if(b===0) throw new Error("division cannot be performed");
           return a/b;
         //(to be use in case of internal values) default:
         
@@ -63,7 +63,7 @@ export const calculator=(a:number,b:number,operation:Operation):number =>{ //num
         // this is to be caught by the calling code using try-catch
       }
 
-}
+};
 
 // const isError = (err: unknown): err is Error=>{
    

@@ -2,7 +2,7 @@
 // infer the types
 
 import express from 'express';
-import { calculator } from './calculator';
+import { Operation, calculator } from './calculator';
 
 const app = express();
 
@@ -13,12 +13,14 @@ app.get('/ping', (_req , res) => {
 });
 
 app.post('/calculator',(req, res) => {
-    
-  const {value_1,value_2,operation} = req.body
-  const result = calculator(value_1, value_2, operation) 
-  res.send({result})
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment 
+  const {value_1,value_2,operation} = req.body;
   
-})
+  const result = calculator(Number(value_1),Number( value_2), operation as Operation); 
+  
+  res.send({result});
+  
+});
 
 
 
