@@ -58,15 +58,4 @@ const calculator=(a:number,b:number,operation:Operation):number =>{ //number|str
 // }
 const {value1,value2,operation} = parseArguments(process.argv)
 
-try {
-  console.log(calculator(value1,value2 , operation as Operation));
- // Since the default type of the error object in TypeScript is unknown, we have to narrow the type to access the field:
-} catch (error: unknown) {
-  let errorMessage = 'Something went wrong: '
-  if (error instanceof Error) { // the instanceof narrowing is required , else you cannot access the error 'message' property
-    errorMessage += error.message;
-  }
-  console.log(errorMessage);
-}
-
-// accessing the command line arguments 
+console.log(calculator(value1,value2 , operation as Operation));
