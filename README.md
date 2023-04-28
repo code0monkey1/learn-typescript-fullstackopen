@@ -678,4 +678,12 @@ So we have to `narrow the type` to access the `message` field like so :_
                 return res.status(400).send({ error: '...'});
               }
 
+              // The `op` variable , should be of type `Operation`, but since that's not been verified , you'll get an eslint error when calling the function calculate(v1,v2,op), so ,   we can either silence the eslint rule like above ,   or assert it's type as Operation, while passing it in . This is not ideal , as ideally , you should use a type-guard function instead.
+
+               const result = calculator(
+                  Number(value1), Number(value2), op as Operation
+                ); 
+              
+                return res.send({ result });
+
            ```
