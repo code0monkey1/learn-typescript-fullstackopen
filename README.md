@@ -606,30 +606,12 @@ So we have to `narrow the type` to access the `message` field like so :_
 
       ---
 
-     1. Install the following :  
+    1. Install the following :  
 
          `npm install --save-dev eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser`  
            
 
-     <!-- 1. Configure ESlint to disallow explicit any. Write the following rules to .eslintrc : ( we will later replace this with the recommended `@typescript-eslint` settings)
-
-         ```json
-    
-               {
-                 "parser": "@typescript-eslint/parser",
-                 "parserOptions": {
-                   "ecmaVersion": 11,
-                   "sourceType": "module"
-                 },
-                 "plugins": ["@typescript-eslint"],
-                 "rules": {
-                   "@typescript-eslint/no-explicit-any": 2 // this is the exact rule that will disallow explicit any
-                 }
-               }
-           
-         ``` -->
-
-      2. set up a lint npm script to inspect the files with .ts extension by modifying the package.json file.
+    1.  set up a lint npm script to inspect the files with .ts extension by modifying the package.json file.
         
           ```json
              \\ package.json
@@ -637,13 +619,13 @@ So we have to `narrow the type` to access the `message` field like so :_
              scripts: {
                    "lint": "eslint --ext .ts ."
              }
-             
-          ```
-          >Now lint will complain if we try to define a variable of type any
-      
-       3.  Put the following recommended  `@typescript-eslint` settings  in your `.eslintrc` file : 
+               //Now lint will complain if we try to define a variable of type any
+          ```  
+
+     1.  Put the following recommended  `@typescript-eslint` settings  in your `.eslintrc` file : 
    
-           ```json
+         ```json
+         
            {
                 "extends": [
                   "eslint:recommended",
@@ -672,8 +654,9 @@ So we have to `narrow the type` to access the `message` field like so :_
                   "project": "./tsconfig.json"
                 }
               }
-           ``` 
-      3. Now , you would get an error while getting the values from the `request.body` , so we need to disable the warning on that line, so as to properly parse the values henceforth , before use .  And we can do that by putting the `eslint-disable-next-line [name of the rule to disable]`  **comment right above the erroring line** ,like so : 
+           ```
+
+      1. Now , you would get an error while getting the values from the `request.body` , so we need to disable the warning on that line, so as to properly parse the values henceforth , before use .  And we can do that by putting the `eslint-disable-next-line [name of the rule to disable]`  **comment right above the erroring line** ,like so : 
    
            ```javascript
              
@@ -696,3 +679,4 @@ So we have to `narrow the type` to access the `message` field like so :_
                 return res.send({ result });
 
            ```
+  
