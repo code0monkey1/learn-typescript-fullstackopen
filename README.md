@@ -591,17 +591,25 @@ So we have to `narrow the type` to access the `message` field like so :_
         }
 
      ``` 
-1. Setting proper `ES-Lint` and `.tsconfig` settings to not allow `explicit any` .
+2. Setting proper `ES-Lint`  settings to not allow `explicit any` .
   
       >When you extract the `body` property from the request in an express app, the compiler does not complain to type checking the values in the body , as `express explicitly gives` the values an `any property`.
      >
       >This is not caught by the `.tsconfig` settings, as till now , `we've only disallowed implicit any` . Using values typed explicitly as any from the express body is a problem , as you're not sure what types they actually are of , and then passing them through the functions could create issues if the values are not of the expected type.
       >
-      >To avoid this problem , we need define proper rules in   `.eslintrc` an `.tsconfig` to `disallow the use of explicit any`, and `only use values that are verified` to belong to a specific type, using type guards.
+      >To avoid this problem , we need define proper rules in   `.eslintrc`  to `disallow the use of explicit any`, and `only use values that are verified` to belong to a specific type, using type guards.   
 
-     1. Install the following :
+      
+    ---
 
-         `npm install --save-dev eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser`
+      _`typescript-eslint` enables ESLint to run on TypeScript code_
+
+      ---
+
+     1. Install the following :  
+
+         `npm install --save-dev eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser`  
+           
 
      <!-- 1. Configure ESlint to disallow explicit any. Write the following rules to .eslintrc : ( we will later replace this with the recommended `@typescript-eslint` settings)
 
@@ -621,7 +629,7 @@ So we have to `narrow the type` to access the `message` field like so :_
            
          ``` -->
 
-      1. set up a lint npm script to inspect the files with .ts extension by modifying the package.json file.
+      2. set up a lint npm script to inspect the files with .ts extension by modifying the package.json file.
         
           ```json
              \\ package.json
@@ -633,7 +641,7 @@ So we have to `narrow the type` to access the `message` field like so :_
           ```
           >Now lint will complain if we try to define a variable of type any
       
-      1.  Put the following recommended  `@typescript-eslint` settings  in your `.eslintrc` file : 
+       3.  Put the following recommended  `@typescript-eslint` settings  in your `.eslintrc` file : 
    
            ```json
            {
@@ -665,7 +673,7 @@ So we have to `narrow the type` to access the `message` field like so :_
                 }
               }
            ``` 
-      2. Now , you would get an error while getting the values from the `request.body` , so we need to disable the warning on that line, so as to properly parse the values henceforth , before use .  And we can do that by putting the `eslint-disable-next-line [name of the rule to disable]`  **comment right above the erroring line** ,like so : 
+      3. Now , you would get an error while getting the values from the `request.body` , so we need to disable the warning on that line, so as to properly parse the values henceforth , before use .  And we can do that by putting the `eslint-disable-next-line [name of the rule to disable]`  **comment right above the erroring line** ,like so : 
    
            ```javascript
              
