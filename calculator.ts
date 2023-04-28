@@ -1,5 +1,12 @@
 export type Operation = 'add'|'subtract'|'multiply'|'divide';
 
+ /* The `interface MultiplyValues` is defining the shape of an object that has three properties:
+ `value1`, `value2`, and `operation`. `value1` and `value2` are both of type `number`, while
+ `operation` is of type `Operation`, which is a custom type defined as a union of string literals
+ `'add'`, `'subtract'`, `'multiply'`, and `'divide'`. This interface is used to ensure that the
+ `parseArguments` function returns an object with these three properties, and that their types are
+ correct. */
+
   interface MultiplyValues {
     value1: number;
     value2: number;
@@ -17,6 +24,16 @@ export type Operation = 'add'|'subtract'|'multiply'|'divide';
     
      
   };
+/**
+ * The function takes an array of string arguments, validates them, and returns an object with two
+ * numeric values and an operation.
+ * @param {string[]} args - An array of strings representing the command line arguments passed to the
+ * program.
+ * @returns The function `parseArguments` returns an object of type `MultiplyValues` which has three
+ * properties: `value1`, `value2`, and `operation`. The values of `value1` and `value2` are obtained by
+ * converting the third and fourth elements of the `args` array to numbers, respectively. The value of
+ * `operation` is the fifth element of the `args` array
+ */
 
 export const parseArguments = (args: string[]): MultiplyValues => {
     
