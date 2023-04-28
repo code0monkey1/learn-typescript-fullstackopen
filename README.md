@@ -593,4 +593,12 @@ So we have to `narrow the type` to access the `message` field like so :_
      ``` 
 2. Setting proper `ES-Lint` and `.tsconfig` settings to not allow `explicit any` .
   
-  When you extract the `body` property from the request in an express app, the compiler does not complain to type checking the values in the body , as `express explicitly gives` the values an `any property`.
+  >When you extract the `body` property from the request in an express app, the compiler does not complain to type checking the values in the body , as `express explicitly gives` the values an `any property`.
+ >
+  >This is not caught by the `.tsconfig` settings, as till now , `we've only disallowed implicit any` . Using values typed explicitly as any from the express body is a problem , as you're not sure what types they actually are of , and then passing them through the functions could create issues if the values are not of the expected type.
+  >
+  >To avoid this problem , we need define proper rules in   `.eslintrc` an `.tsconfig` to `disallow the use of explicit any`, and `only use values that are verified` to belong to a specific type, using type guards.
+
+  Install the following :
+
+  `npm install --save-dev eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser`
