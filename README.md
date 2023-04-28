@@ -603,7 +603,7 @@ So we have to `narrow the type` to access the `message` field like so :_
 
          `npm install --save-dev eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser`
 
-     1. Configure ESlint to disallow explicit any. Write the following rules to .eslintrc :
+     <!-- 1. Configure ESlint to disallow explicit any. Write the following rules to .eslintrc : ( we will later replace this with the recommended `@typescript-eslint` settings)
 
          ```json
     
@@ -619,7 +619,7 @@ So we have to `narrow the type` to access the `message` field like so :_
                  }
                }
            
-         ```
+         ``` -->
 
       1. set up a lint npm script to inspect the files with .ts extension by modifying the package.json file.
         
@@ -633,7 +633,8 @@ So we have to `narrow the type` to access the `message` field like so :_
           ```
           >Now lint will complain if we try to define a variable of type any
       
-      1.  Put the following recommended settings in your `.eslintrc` file : 
+      1.  Put the following recommended  `@typescript-eslint` settings  in your `.eslintrc` file : 
+   
            ```json
            {
                 "extends": [
@@ -664,7 +665,7 @@ So we have to `narrow the type` to access the `message` field like so :_
                 }
               }
            ``` 
-      1. Now , you would get an error while getting the values from the `request.body` , so we need to disable the warning on that line, so as to properly parse the values henceforth , before use .  And we can do that by putting the `eslint-disable-next-line [name of the rule to disable]`  **comment right above the erroring line** ,like so : 
+      2. Now , you would get an error while getting the values from the `request.body` , so we need to disable the warning on that line, so as to properly parse the values henceforth , before use .  And we can do that by putting the `eslint-disable-next-line [name of the rule to disable]`  **comment right above the erroring line** ,like so : 
    
            ```javascript
              
