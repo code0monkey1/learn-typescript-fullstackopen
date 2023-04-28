@@ -664,7 +664,7 @@ So we have to `narrow the type` to access the `message` field like so :_
                 }
               }
            ``` 
-      1. Now , you would get an error while getting the values from the `request.body` , so we need to disable the warning on that line, so as to properly parse the values henceforth , before use .  And we can do that by putting the `eslint error ignore rule` right above the request body ,like so : 
+      1. Now , you would get an error while getting the values from the `request.body` , so we need to disable the warning on that line, so as to properly parse the values henceforth , before use .  And we can do that by putting the `eslint-disable-next-line [name of the rule to disable]`  **comment right above the erroring line** ,like so : 
    
            ```javascript
              
@@ -673,6 +673,9 @@ So we have to `narrow the type` to access the `message` field like so :_
               // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment 
               const { value1, value2, op } = req.body; // this will error if the eslint-disable comment is not mentioned right above it .
               
-               // Now we can pass the values through type guards to validate the types of the values.
+               // Now we can pass the values through type guards , and other types of validation criterial ,to validate the types of the values.
+               if ( !value1 || isNaN(Number(value1)) ) {
+                return res.status(400).send({ error: '...'});
+              }
 
            ```
