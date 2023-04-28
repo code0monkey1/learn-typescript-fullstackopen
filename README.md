@@ -663,4 +663,16 @@ So we have to `narrow the type` to access the `message` field like so :_
                   "project": "./tsconfig.json"
                 }
               }
+           ``` 
+      1. Now , you would get an error while getting the values from the `request.body` , so we need to disable the warning on that line, so as to properly parse the values henceforth , before use .  And we can do that by putting the `eslint error ignore rule` right above the request body ,like so : 
+   
+           ```javascript
+             
+              app.post('/calculate', (req, res) => {
+
+              // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment 
+              const { value1, value2, op } = req.body; // this will error if the eslint-disable comment is not mentioned right above it .
+              
+               // Now we can pass the values through type guards to validate the types of the values.
+
            ```
