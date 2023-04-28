@@ -591,7 +591,7 @@ So we have to `narrow the type` to access the `message` field like so :_
         }
 
      ``` 
-2. Setting proper `ES-Lint`  settings to not allow `explicit any` .
+1. Setting proper `ES-Lint`  settings to not allow `explicit any` .
   
       >When you extract the `body` property from the request in an express app, the compiler does not complain to type checking the values in the body , as `express explicitly gives` the values an `any property`.
      >
@@ -679,4 +679,5 @@ So we have to `narrow the type` to access the `message` field like so :_
                 return res.send({ result });
 
            ```
-  
+
+  ---
