@@ -569,3 +569,7 @@ So we have to `narrow the type` to access the `message` field like so :_
    ```
 
     >now, by running `npm run dev`, we have a working, auto-reloading development environment for our project.
+  
+1. Extracting query values from a query string URL 
+
+   `http://localhost:3002/bmi?height=180&weight=72.` 
