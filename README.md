@@ -602,3 +602,22 @@ So we have to `narrow the type` to access the `message` field like so :_
   Install the following :
 
   `npm install --save-dev eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser`
+
+  Next , configure ESlint to disallow explicit any. Write the following rules to .eslintrc :
+
+  ```json
+
+        {
+          "parser": "@typescript-eslint/parser",
+          "parserOptions": {
+            "ecmaVersion": 11,
+            "sourceType": "module"
+          },
+          "plugins": ["@typescript-eslint"],
+          "rules": {
+            "@typescript-eslint/no-explicit-any": 2 // this is the exact rule that will disallow explicit any
+          }
+        }
+    
+  ```
+    
