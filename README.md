@@ -238,6 +238,7 @@
                 animal
                  object `based on its type`.
       
+
       1. **Discriminated Union**
          
          - Using a discriminated union, and can narrow out the members of the union.
@@ -318,7 +319,7 @@
       
 ## Creating Custom Types :   
 
-Eg : `type Operation = 'multiply' | 'add' | 'divide';`
+Eg : `type Operation = 'multiply' | 'add' | 'divide';`  ( This is called a `Union Type`)
 
 Where ever you use this as a type , you'll have to provide either of the 3 values specified , for it to be a valid assignment.
 
