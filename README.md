@@ -319,9 +319,11 @@
       
 ## Creating Custom Types :   
 
-Eg : `type Operation = 'multiply' | 'add' | 'divide';`  ( This is called a `Union Type`)
+1. Union Type :
+      `type Operation = 'multiply' | 'add' | 'divide';`  ( This is called a `Union Type`)  
+      _Where ever you use this as a type , you'll have to provide either of the 3 values specified , for it to be a valid assignment._  
+1. Utility Types
 
-Where ever you use this as a type , you'll have to provide either of the 3 values specified , for it to be a valid assignment.
 
 > `Quick Tip` : So if, for example, your values comes from an external interface, there is no definite guarantee that it will be one of the allowed values , specified by you in the type definition.  
 > 
