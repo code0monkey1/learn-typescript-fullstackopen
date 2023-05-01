@@ -4,13 +4,21 @@ interface Person {
   age: number;
 }
 
-type PrivatePerson = Pick<Person, "age">;
+type PrivatePerson = Omit<Person, "age">;
 
-const privatePerson:PrivatePerson={
+
+const getPerson = (person: PrivatePerson):PrivatePerson =>{
+  return person;
+};
+
+const p1:Person={
+  /* `name: 'John',` is creating an object with a property `name` and assigning it the value `'John'`.
+  This object is of type `Person`. */
+  name: 'John',
   age: 0,
 };
 
-console.log(privatePerson);
+console.log(getPerson(p1));
 // function greet(person: Person) {
 //   console.log(`Hello, ${person.name}!`);
 // }
