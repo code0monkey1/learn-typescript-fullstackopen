@@ -323,7 +323,7 @@
       `type Operation = 'multiply' | 'add' | 'divide';`  ( This is called a `Union Type`)  
       _Where ever you use this as a type , you'll have to provide either of the 3 values specified , for it to be a valid assignment._  
 1. Utility Types :   
-    1. The `Pick` utility type allows us to choose which fields of an existing type we want to use. Pick can be used to either construct a completely new type or to inform a function what it should return on runtime. 
+    1. The `Pick` utility type allows us to choose which fields of an existing type we want to use. Pick can be used to either construct a completely new type or to inform a function what it should return on runtime. ( Example usecase , if we cant to not get sensitive information like `password` from the backend , we can confirm the same using Pick )
    
        ```javascript
          const getNonSensitiveEntries =
@@ -331,6 +331,7 @@
             // ...
           }
        ```
+
 
 
 > `Quick Tip` : So if, for example, your values comes from an external interface, there is no definite guarantee that it will be one of the allowed values , specified by you in the type definition.  
