@@ -19,6 +19,9 @@ const p1:Person={
 };
 
 console.log(getPerson(p1));
+
+
+
 // function greet(person: Person) {
 //   console.log(`Hello, ${person.name}!`);
 // }
