@@ -1,9 +1,16 @@
 
-// interface Person {
-//   name: string;
-//   age: number;
-// }
+interface Person {
+  name: string;
+  age: number;
+}
 
+type PrivatePerson = Pick<Person, "age">;
+
+const privatePerson:PrivatePerson={
+  age: 0,
+};
+
+console.log(privatePerson);
 // function greet(person: Person) {
 //   console.log(`Hello, ${person.name}!`);
 // }
