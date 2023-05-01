@@ -324,7 +324,9 @@
       _Where ever you use this as a type , you'll have to provide either of the 3 values specified , for it to be a valid assignment._  
 1. Utility Types :   
     1. The `Pick` utility type allows us to choose which fields of an existing type we want to use. Pick can be used to either construct a completely new type or to inform a function what it should return on runtime. 
-       > Example usecase , if we cant to not get sensitive information like `password` from the backend , we can confirm the same using Pick , and not including the `password` . If we still get the `password` from the backend, then it will error.
+       > Example usecase , if don't want to get sensitive information like `password` from the backend , we can confirm the same using Pick , and check if the data we received does not include the `password` field .
+       >
+       >If we still get the `password` from the backend, then it will error .
    
        ```javascript
          const getNonSensitiveEntries =
@@ -332,7 +334,14 @@
             // ...
           }
        ```
-    2. The `Omit` utility type :
+    2. The `Omit` utility type : A better way to implement the same type safety for for the above scenario is to use the `Omit` utility type to just create a type by omitting the `password` field.
+     
+     ```javascript
+        const getNonSensitiveEntries =
+          (): Pick<DiaryEntry, 'password'>[] => {
+            // ...
+          }
+     ```
 
 
 > `Quick Tip` : So if, for example, your values comes from an external interface, there is no definite guarantee that it will be one of the allowed values , specified by you in the type definition.  
