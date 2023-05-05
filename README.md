@@ -600,27 +600,6 @@ So we have to `narrow the type` to access the `message` field like so :_
 
     >now, by running `npm run dev`, we have a working, auto-reloading development environment for our project.
   
-1. Extracting query values from a query string URL :
-
-   `http://localhost:3002/bmi?height=180&weight=72.` 
-
-   To get the values of `height` and `weight`, from the query string, we use the built in  `qs` module , like so : 
-
-     ```javascript
-      import qs from 'qs';
-        
-        app.get('/bmi',(req, res) => {
-    
-
-        const query = qs.stringify(req.query);
-         
-        const { height, weight } = qs.parse(query);
-
-         // do whatever you need to do with it
-
-        }
-
-     ``` 
 1. Setting proper `ES-Lint`  settings to not allow `explicit any` .
   
       >When you extract the `body` property from the request in an express app, the compiler does not complain to type checking the values in the body , as `express explicitly gives` the values an `any property`.
@@ -710,5 +689,26 @@ So we have to `narrow the type` to access the `message` field like so :_
                 return res.send({ result });
 
            ```
+     2.  Extracting query values from a query string URL :
 
+          `http://localhost:3002/bmi?height=180&weight=72` 
+       
+          
+          To get the values of `height` and `weight`, from the query string, we use the built in  `qs` module ,like so : 
+       
+           ```javascript
+             import qs from 'qs';
+               
+               app.get('/bmi',(req, res) => {
+           
+       
+               const query = qs.stringify(req.query);
+                
+               const { height, weight } = qs.parse(query);
+       
+                // do whatever you need to do with it
+       
+               }
+       
+           ``` 
   ---
