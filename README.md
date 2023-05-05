@@ -529,6 +529,9 @@ So we have to `narrow the type` to access the `message` field like so :_
 
      `npm install express`
 
+1. Install the types for express :   
+   `npm install --save-dev @types/express`
+
 1. And then add the start script to package.json:
 
     ```json
@@ -566,8 +569,6 @@ So we have to `narrow the type` to access the `message` field like so :_
 
       >A good rule of thumb is to try importing a module using the import statement first. We will always use this method in the frontend. If import does not work, try a combined method: import ... = require('...').
 
-1. Install the types for express :   
-   `npm install --save-dev @types/express`
 
 1. Enable auto-reloading to improve our workflow by Installing `ts-node-dev` :
 
