@@ -666,9 +666,9 @@ So we have to `narrow the type` to access the `message` field like so :_
               }
            ```
 
-      1. Now , you would get an error while getting the values from the `request.body` , so we need to disable the warning on that line, so as to properly parse the values henceforth , before use .  And we can do that by putting the `eslint-disable-next-line [name of the rule to disable]`  **comment right above the erroring line** ,like so : 
+  1. Now , you would get an error while getting the values from the `request.body` , so we need to disable the warning on that line, so as to properly parse the values henceforth , before use .  And we can do that by putting the `eslint-disable-next-line [name of the rule to disable]`  **comment right above the erroring line** , like so : 
    
-           ```javascript
+        ```javascript
              
               app.post('/calculate', (req, res) => {
 
@@ -688,27 +688,25 @@ So we have to `narrow the type` to access the `message` field like so :_
               
                 return res.send({ result });
 
-           ```
-     2.  Extracting query values from a query string URL :
+        ```
+  1.  Extracting query values from a query string URL :
 
-          `http://localhost:3002/bmi?height=180&weight=72` 
+        `http://localhost:3002/bmi?height=180&weight=72` 
        
-          
-          To get the values of `height` and `weight`, from the query string, we use the built in  `qs` module ,like so : 
+        To get the values of `height` and `weight`, from the query string, we use the built in  `qs` module ,like so : 
        
-           ```javascript
+        ```javascript
              import qs from 'qs';
                
-               app.get('/bmi',(req, res) => {
+             app.get('/bmi',(req, res) => {
            
        
-               const query = qs.stringify(req.query);
+              const query = qs.stringify(req.query);
                 
-               const { height, weight } = qs.parse(query);
+              const { height, weight } = qs.parse(query);
        
                 // do whatever you need to do with it
        
-               }
+              }
        
-           ``` 
-  ---
+        ```
