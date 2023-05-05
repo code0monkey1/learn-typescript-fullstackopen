@@ -584,7 +584,7 @@ So we have to `narrow the type` to access the `message` field like so :_
       
       ```
 
-1. Add a script to package.json:
+   Add a script to package.json:
 
    ```json
     {
