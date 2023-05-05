@@ -453,7 +453,9 @@ So we have to `narrow the type` to access the `message` field like so :_
          ```bash 
               npm install -g ts-node typescript       
          ```
-3. Add a configuration file `tsconfig.json` to the project with the following content.  
+3. Add a configuration file `tsconfig.json` to the project with the following content. 
+   > Next, we have to create a tsconfig.json file. The tsconfig.json file specifies the root files and the compiler options required to compile the project. We use the “tsc” command to do that for us.
+     `npx tsc --init` 
   The tsconfig.json file is used to 
    + define how the TypeScript compiler should interpret the code
    +  how strictly the compiler should work
