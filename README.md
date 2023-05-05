@@ -453,23 +453,28 @@ So we have to `narrow the type` to access the `message` field like so :_
          ```bash 
               npm install -g ts-node typescript       
          ```
-3. Add a configuration file `tsconfig.json` to the project with the following content. 
+1. Add a configuration file `tsconfig.json` to the project with the following content. 
+  
    > Next, we have to create a tsconfig.json file. The tsconfig.json file specifies the root files and the compiler options required to compile the project. We use the “tsc” command to do that for us.
-     `npx tsc --init` 
-  The tsconfig.json file is used to 
-   + define how the TypeScript compiler should interpret the code
-   +  how strictly the compiler should work
-   +  which files to watch or ignore
-   
-    ```json
-             {
-          "compilerOptions":{
-            "noImplicitAny": true // this will not allow  'any' type to exist . 
-                          // If this is turned to false , the default type would be 'any'
-          }
-        }
-    ```
- 1. You can directly use `ts-node` to execute a `typescript` file like so : `ts-node test.ts` OR you could install `ts-node` as a `dev-dependency` and run it using an `npm script` in `package.json`  , like so : `npm run ts-node test.ts`
+     
+     ```bash 
+      npx tsc --init
+     ``` 
+
+     + The `tsconfig.json` file is used to :
+        + define how the TypeScript compiler should interpret the code
+        +  how strictly the compiler should work
+        +  which files to watch or ignore
+        
+         ```json
+                  {
+               "compilerOptions":{
+                 "noImplicitAny": true // this will not allow  'any' type to exist . 
+                               // If this is turned to false , the default type would be 'any'
+               }
+             }
+         ```
+ 2. You can directly use `ts-node` to execute a `typescript` file like so : `ts-node test.ts` OR you could install `ts-node` as a `dev-dependency` and run it using an `npm script` in `package.json`  , like so : `npm run ts-node test.ts`
     
       ```json
   
