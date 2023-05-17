@@ -442,11 +442,12 @@ So we have to `narrow the type` to access the `message` field like so :_
 >`This is actually not quite true`. This rule applies only to files that are treated as "scripts". A file is `a script if it does not contain any export or import statements. If a file has those, then the file is treated as a module`, and the variables do not get defined in the block-scope.
 
 ### Index Signatures
+
 When typing objects in TypeScript, sometimes it’s not possible to know the property names for an object, like when we get back information from an outside data source/API. While we may not know the exact property names at compile-time, we may know what the data will look like in general. In that case, it’s useful to write an object type that allows us to include a variable name for the property name. This feature is called index signatures.
 
 Imagine we query a map API to get a list of latitudes where a solar eclipse can be viewed. The data might look like:
 
-```JSON
+```javascript
 {
   '40.712776': true;
   '41.203323': true;
@@ -456,7 +457,7 @@ Imagine we query a map API to get a list of latitudes where a solar eclipse can 
 
 We know that all the property names will be strings, and all their values will be booleans, but we don’t know what the property names will be. To type this object, we can utilize an index signature to type this object. We could write this object’s type like this:
 
-```JSON
+```javascript
 interface SolarEclipse {
   [latitude: string]: boolean;
 } 
