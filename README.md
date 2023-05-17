@@ -446,7 +446,7 @@ When typing objects in TypeScript, sometimes it’s not possible to know the pro
 
 Imagine we query a map API to get a list of latitudes where a solar eclipse can be viewed. The data might look like:
 
-```json
+```JSON
 {
   '40.712776': true;
   '41.203323': true;
@@ -456,7 +456,7 @@ Imagine we query a map API to get a list of latitudes where a solar eclipse can 
 
 We know that all the property names will be strings, and all their values will be booleans, but we don’t know what the property names will be. To type this object, we can utilize an index signature to type this object. We could write this object’s type like this:
 
-```json
+```JSON
 interface SolarEclipse {
   [latitude: string]: boolean;
 } 
