@@ -339,7 +339,7 @@
      
      ```javascript
         const getNonSensitiveEntries =
-          (): Pick<DiaryEntry, 'password'>[] => {
+          (): Omit<DiaryEntry, 'password'>[] => {
             // ...
           }
      ```
